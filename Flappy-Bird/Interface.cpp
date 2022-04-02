@@ -4,15 +4,27 @@
 
 void GameStart()
 {
-	initgraph(450, 700);
+	initgraph(INTERFACE_WIDTH, INTERFACE_WEIGHT);
 	GamePlaying();
+	closegraph();
 	system("pause");
 }
 
 void GamePlaying()
 {
 	class Map map;
-	map.background();
+	int ans = 0;
+	while (1)
+	{
+		map.background();
+		map.groundmove(ans);
+		Timestamp();
+		if (kbhit())
+		{
+			break;
+		}
+	}
+
 }
 
 void GameOver();
