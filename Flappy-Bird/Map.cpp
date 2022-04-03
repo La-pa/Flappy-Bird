@@ -7,7 +7,7 @@ Map::Map()
 	loadimage(&backgroundphoto, "Resorce/picture/background.png", INTERFACE_WIDTH, INTERFACE_WEIGHT);
 
 	//µÿ√ÊÕº∆¨
-	loadimage(&groundphoto, "Resorce/picture/ground.png",493, 150);
+	loadimage(&groundphoto, "Resorce/picture/ground.png",400 + 93, 150);
 
 }
 

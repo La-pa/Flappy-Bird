@@ -16,11 +16,15 @@ private:
 	int Speed;
 
 	//图片信息
-	IMAGE flyphoto00;
+	IMAGE flyphoto00;//正常
+	IMAGE flyphoto01;//向上
+	IMAGE flyphoto02;//正常
+	IMAGE flyphoto03;//向下
+
 public:
 
-	Bird(int centerX, int centerY);
-
+	Bird(int drawX,int drawY);
+	void fly(int &flyans);
 
 };
 

@@ -12,12 +12,15 @@ void GameStart()
 
 void GamePlaying()
 {
-	class Map map;
+	Map map;
+	Bird bird = Bird(175,275);
 	int ans = 0;
+	int flyans = 0;
 	while (1)
 	{
 		map.background();
 		map.groundmove(ans);
+		bird.fly(flyans);
 		Timestamp();
 		if (kbhit())
 		{

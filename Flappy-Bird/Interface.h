@@ -1,6 +1,7 @@
 #pragma once
 #include"Global.h"
 #include"Map.h"
+#include"Bird.h"
 
 using namespace std;
 
