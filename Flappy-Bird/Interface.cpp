@@ -16,16 +16,14 @@ void GamePlaying()
 	Bird bird = Bird(175,275);
 	int ans = 0;
 	int flyans = 0;
-	while (1)
+	while (bird.drawY <= 500 && bird.drawY >0)
 	{
 		map.background();
 		map.groundmove(ans);
 		bird.fly(flyans);
+		bird.flapwings();
 		Timestamp();
-		if (kbhit())
-		{
-			break;
-		}
+
 	}
 
 }

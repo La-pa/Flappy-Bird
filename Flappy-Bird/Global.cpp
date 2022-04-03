@@ -6,9 +6,9 @@ void Timestamp()
 {
 
 	while (clock() < Time_temp);
-	Time_temp = clock() + 100;
-	//设定时间为1秒10帧
-	cout << Time_temp << endl;
+	Time_temp = clock() + 1000 / FPS;
+	//设定时间为1秒60帧
+	//cout << Time_temp << endl;
 }
 
 // 载入PNG图并去透明部分

@@ -12,8 +12,9 @@ private:
 	int centerX;
 	int centerY;
 
-	int m;
-	int Speed;
+	//速度
+	double speed;
+	
 
 	//图片信息
 	IMAGE flyphoto00;//正常
@@ -23,8 +24,13 @@ private:
 
 public:
 
+public:
+	int drawY;
+
 	Bird(int drawX,int drawY);
 	void fly(int &flyans);
 
+	//根据用户输入来拍打翅膀
+	void flapwings();
 };
 
