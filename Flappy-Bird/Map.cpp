@@ -1,21 +1,26 @@
 #include "Map.h"
 
 
+Map::Map()
+{
+	//±≥æ∞Õº∆¨
+	loadimage(&backgroundphoto, "Resorce/picture/background.png", INTERFACE_WIDTH, INTERFACE_WEIGHT);
+
+	//µÿ√ÊÕº∆¨
+	loadimage(&groundphoto, "Resorce/picture/ground.png",493, 150);
+
+}
+
 void Map:: background()
 {
-	IMAGE img;
-	loadimage(&img, "Resorce/picture/background.png", INTERFACE_WIDTH, INTERFACE_WEIGHT);
-	putimage(0, 0, &img);
+
+	putimage(0, 0, &backgroundphoto);
 }
 
 void Map::groundmove(int &ans)
 {
-	IMAGE img;
-	loadimage(&img, "Resorce/picture/ground.png", 500, 150);
-
-	putimage(-ans*10, 550, &img);
-
-
+	//loadimage(&img, "Resorce/picture/ground.png", 500, 150);
+	putimage(-ans*10, 550, &groundphoto);
 	ans++;
 	ans %= 10;
 }

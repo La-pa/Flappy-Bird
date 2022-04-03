@@ -4,7 +4,11 @@
 class Map
 {
 private:
+	IMAGE backgroundphoto;//背景图片
+	IMAGE groundphoto;//地面图片
 public:
+	//构造函数
+	Map();
 
 	//背景图片
 	void background();

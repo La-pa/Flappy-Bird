@@ -15,7 +15,12 @@ private:
 	int m;
 	int Speed;
 
+	//Õº∆¨–≈œ¢
+	IMAGE flyphoto00;
 public:
+
 	Bird(int centerX, int centerY);
+
+
 };
 
