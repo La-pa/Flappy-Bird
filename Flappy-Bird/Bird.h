@@ -6,7 +6,6 @@ class Bird
 private:
 	//绘图点坐标
 	int drawX;
-	int drawY;
 
 	//图形中心点坐标
 	int centerX;
