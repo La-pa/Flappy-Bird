@@ -27,7 +27,7 @@ void GamePlaying()
 	Bird bird = Bird(175,275);
 	
 	//test
-	Tube tube(200,0);
+	Tube tube(200,-150);
 	
 	int ans = 0;
 	int flyans = 0;
