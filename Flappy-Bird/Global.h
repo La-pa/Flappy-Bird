@@ -18,6 +18,12 @@ const int INTERFACE_WEIGHT = 700;
 const int BIRD_WIDTH = 50;
 const int BIRD_WEIGHT = 50;
 
+//重力
+const int GRAVITY = 10;
+
+//帧数
+const int FPS = 60;
+
 //全局变量
 extern clock_t Time_temp ;
 
