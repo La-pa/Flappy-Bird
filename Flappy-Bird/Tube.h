@@ -11,11 +11,12 @@ public:
 
 	int drawX;
 
-	//加载管子图片
-	IMAGE tubephoto;
+	//管子图片
+	IMAGE TubeUpPhoto;
+	IMAGE TubeDownPhoto;
 
 	//构造函数
-	Tube(int x);
+	Tube(int x, int y);
 	
 	virtual void photoprint();
 };
