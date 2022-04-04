@@ -4,22 +4,35 @@
 class Bird
 {
 private:
-	//»æÍ¼µã×ø±ê
+	//ç»˜å›¾ç‚¹åæ ‡
 	int drawX;
 
-	//Í¼ĞÎÖĞĞÄµã×ø±ê
+	//å›¾å½¢ä¸­å¿ƒç‚¹åæ ‡
 	int centerX;
 	int centerY;
 
-	//ËÙ¶È
+	//é€Ÿåº¦
 	double speed;
 	
 
-	//Í¼Æ¬ĞÅÏ¢
-	IMAGE flyphoto00;//Õı³£
-	IMAGE flyphoto01;//ÏòÉÏ
-	IMAGE flyphoto02;//Õı³£
-	IMAGE flyphoto03;//ÏòÏÂ
+	//å›¾ç‰‡ä¿¡æ¯
+	//æ°´å¹³æ–¹å‘
+	IMAGE flyphoto00;//æ­£å¸¸
+	IMAGE flyphoto01;//å‘ä¸Š
+	IMAGE flyphoto02;//æ­£å¸¸
+	IMAGE flyphoto03;//å‘ä¸‹
+
+	//æ–¹å‘å‘ä¸Š
+	IMAGE flyphoto10;//æ­£å¸¸
+	IMAGE flyphoto11;//å‘ä¸Š
+	IMAGE flyphoto12;//æ­£å¸¸
+	IMAGE flyphoto13;//å‘ä¸‹
+
+	//æ–¹å‘å‘ä¸‹
+	IMAGE flyphoto20;//æ­£å¸¸
+	IMAGE flyphoto21;//å‘ä¸Š
+	IMAGE flyphoto22;//æ­£å¸¸
+	IMAGE flyphoto23;//å‘ä¸‹
 
 public:
 
@@ -29,7 +42,7 @@ public:
 	Bird(int drawX,int drawY);
 	void fly(int &flyans);
 
-	//¸ù¾İÓÃ»§ÊäÈëÀ´ÅÄ´ò³á°ò
+	//æ ¹æ®ç”¨æˆ·è¾“å…¥æ¥æ‹æ‰“ç¿…è†€
 	void flapwings();
 };
 

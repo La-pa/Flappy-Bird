@@ -5,14 +5,26 @@ Bird::Bird(int drawX, int drawY)
 	this->drawX = drawX;
 	this->drawY = drawY;
 
-	loadimage(&flyphoto00, "Resorce/picture/birdNormal.png", BIRD_WIDTH, BIRD_WEIGHT);
 
 	speed = 0;
 
+	//水平方向
+	loadimage(&flyphoto00, "Resorce/picture/birdNormal.png", BIRD_WIDTH, BIRD_WEIGHT);
+	loadimage(&flyphoto01, "Resorce/picture/birdFlutterUpNormal.png", BIRD_WIDTH, BIRD_WEIGHT);
 	loadimage(&flyphoto02, "Resorce/picture/birdNormal.png", BIRD_WIDTH, BIRD_WEIGHT);
-
 	loadimage(&flyphoto03, "Resorce/picture/birdFlutterDownNormal.png", BIRD_WIDTH, BIRD_WEIGHT);
 
+	//方向向上
+	loadimage(&flyphoto10, "Resorce/picture/birdNormalFly.png", BIRD_WIDTH, BIRD_WEIGHT);
+	loadimage(&flyphoto11, "Resorce/picture/birdFlutterUpFly.png", BIRD_WIDTH, BIRD_WEIGHT);
+	loadimage(&flyphoto12, "Resorce/picture/birdNormalFly.png", BIRD_WIDTH, BIRD_WEIGHT);
+	loadimage(&flyphoto13, "Resorce/picture/birdFlutterDownFly.png", BIRD_WIDTH, BIRD_WEIGHT);
+
+	//方向向下
+	loadimage(&flyphoto20, "Resorce/picture/birdNormalFall.png",BIRD_WIDTH,BIRD_WEIGHT);
+	loadimage(&flyphoto21, "Resorce/picture/birdFlutterUpFall.png",BIRD_WIDTH,BIRD_WEIGHT);
+	loadimage(&flyphoto22, "Resorce/picture/birdNormalFall.png",BIRD_WIDTH,BIRD_WEIGHT);
+	loadimage(&flyphoto23, "Resorce/picture/birdFlutterDownFall.png",BIRD_WIDTH,BIRD_WEIGHT);
 }
 
 void Bird::fly(int &flyans)
