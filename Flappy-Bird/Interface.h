@@ -2,6 +2,7 @@
 #include"Global.h"
 #include"Map.h"
 #include"Bird.h"
+#include "Tube.h"
 
 using namespace std;
 
