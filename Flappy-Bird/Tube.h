@@ -13,7 +13,10 @@ public:
 
 	//管子图片
 	IMAGE TubeUpPhoto;
+	IMAGE TubeUpMaskPhoto;
+
 	IMAGE TubeDownPhoto;
+	IMAGE TubeDownMaskPhoto;
 
 	//构造函数
 	Tube();
