@@ -27,21 +27,37 @@ void GamePlaying()
 	Bird bird = Bird(175,275);
 	
 	//test
-	Tube tube(200,-150);
+	Tube *tubefront= new Tube;
+	Tube* tubeback = new Tube;
+	tubeback->drawX = 640;
 	
 	int ans = 0;
 	int flyans = 0;
 	while (bird.drawY <= 500 && bird.drawY >0)
 	{
 		map.background();
-		tube.photoprint();
+
+		if (tubefront != nullptr)
+		{
+			tubefront->photoprint();
+			tubeback->photoprint();
+		}
+
+		
+		if (tubefront->drawX < -80)
+		{
+			delete tubefront;
+			tubefront = tubeback;
+			tubeback = new Tube;
+		}
+
 		map.groundmove(ans);
 
 		bird.fly(flyans);
 		bird.flapwings();
 		
 		Timestamp();
-
+		
 	}
 	
 	

@@ -16,8 +16,14 @@ public:
 	IMAGE TubeDownPhoto;
 
 	//¹¹Ôìº¯Êý
-	Tube(int x, int y);
+	Tube();
 	
 	virtual void photoprint();
 };
+
+//class TubeUp :public Tube
+//{
+//
+//
+//};
 
