@@ -35,8 +35,6 @@ private:
 	IMAGE flyphoto23;//向下
 
 public:
-
-public:
 	int drawY;
 
 	Bird(int drawX,int drawY);
