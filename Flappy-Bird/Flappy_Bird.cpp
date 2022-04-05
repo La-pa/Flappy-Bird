@@ -1,8 +1,8 @@
-#include"Interface.h"
+#include"Flappy_Bird.h"
 
 
 
-void GameStart()
+void Flappy_Bird::GameStart()
 {
 	initgraph(INTERFACE_WIDTH, INTERFACE_WEIGHT);
 	setbkcolor(WHITE);
@@ -21,7 +21,7 @@ void GameStart()
 
 }
 
-void GamePlaying()
+void Flappy_Bird::GamePlaying()
 {
 	Map map;
 	Bird bird = Bird(175,275);
@@ -63,4 +63,7 @@ void GamePlaying()
 	
 }
 
-void GameOver();
+void Flappy_Bird::GameOver()
+{
+
+}

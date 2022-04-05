@@ -1,7 +1,9 @@
-#include"Interface.h"
+#include"Flappy_Bird.h"
 
 int main()
 {
-	GameStart();
+	Flappy_Bird flappy_bird;
+	flappy_bird.GameStart();
+
 	return 0;
 }
