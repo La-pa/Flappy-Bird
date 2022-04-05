@@ -3,9 +3,10 @@
 Tube::Tube()
 {
 	drawX = 400;
-
-	srand((unsigned)time(NULL));
-	drawY = -300 + (rand() % 7) * 50;
+	TubeUp tubeup;
+	TubeDown tubedown(tubeup);
+	//srand((unsigned)time(NULL));
+	//drawY = -300 + (rand() % 7) * 50;
 
 	loadimage(&TubeUpMaskPhoto, "Resorce/picture/TubeUpMaskPhoto.png", 80, 350);
 	loadimage(&TubeUpPhoto, "Resorce/picture/TubeUp1.png", 80, 350);
@@ -13,19 +14,23 @@ Tube::Tube()
 
 	loadimage(&TubeDownMaskPhoto, "Resorce/picture/TubeDownMaskPhoto.png", 80, 350);
 	loadimage(&TubeDownPhoto, "Resorce/picture/TubeDown1.png", 80, 350);
+	
 
 }
 
-void Tube::photoprint()
+void Tube::photoprint(TubeUp tubeup, TubeDown tubedown)
 {
 
-	int ans = 2;
+	//int ans = 2;
+	//drawX -= 2;
+	//putimage(drawX - ans, drawY, &TubeUpMaskPhoto, SRCPAINT);
+	//putimage(drawX - ans, drawY, &TubeUpPhoto,SRCAND);
+	//
+	//putimage(drawX - ans, drawY + 150 + 350, &TubeDownMaskPhoto, SRCPAINT);
+	//putimage(drawX - ans, drawY + 150 + 350, &TubeDownPhoto, SRCAND);
+	tubeup.photoprint();
+	tubedown.photoprint();
 	drawX -= 2;
-	putimage(drawX - ans, drawY, &TubeUpMaskPhoto, SRCPAINT);
-	putimage(drawX - ans, drawY, &TubeUpPhoto,SRCAND);
 	
-
-	putimage(drawX - ans, drawY + 150 + 350, &TubeDownMaskPhoto, SRCPAINT);
-	putimage(drawX - ans, drawY + 150 + 350, &TubeDownPhoto, SRCAND);
 
 }

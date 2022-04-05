@@ -1,8 +1,13 @@
 #pragma once
 #include"Global.h"
+#include"TubeUp.h"
+#include"TubeDown.h"
 
 class Tube
 {
+
+private:
+	Tube *up;
 protected:
 	
 	int drawY;
@@ -15,6 +20,9 @@ protected:
 	IMAGE TubeDownPhoto;
 	IMAGE TubeDownMaskPhoto;
 
+	//TubeUp tubeup;
+	//TubeDown tubedown;
+
 public:
 
 	int drawX;
@@ -22,7 +30,7 @@ public:
 	//¹¹Ôìº¯Êý
 	Tube();
 	
-	virtual void photoprint();
+	void photoprint(TubeUp tubeup, TubeDown tubedown);
 };
 
 
