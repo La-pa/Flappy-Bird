@@ -7,7 +7,6 @@ Tube::Tube()
 	srand((unsigned)time(NULL));
 	drawY = -300 + (rand() % 7) * 50;
 
-
 	loadimage(&TubeUpMaskPhoto, "Resorce/picture/TubeUpMaskPhoto.png", 80, 350);
 	loadimage(&TubeUpPhoto, "Resorce/picture/TubeUp1.png", 80, 350);
 

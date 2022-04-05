@@ -3,13 +3,10 @@
 
 class Tube
 {
-private:
+protected:
 	
 	int drawY;
-
-public:
-
-	int drawX;
+	//int drawX;
 
 	//管子图片
 	IMAGE TubeUpPhoto;
@@ -18,15 +15,14 @@ public:
 	IMAGE TubeDownPhoto;
 	IMAGE TubeDownMaskPhoto;
 
+public:
+
+	int drawX;
+
 	//构造函数
 	Tube();
 	
 	virtual void photoprint();
 };
 
-//class TubeUp :public Tube
-//{
-//
-//
-//};
 
