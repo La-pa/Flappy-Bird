@@ -9,7 +9,7 @@ private:
 	IMAGE TubeUpPhoto;
 	IMAGE TubeUpMaskPhoto;
 public:
-	TubeUp( );
+	TubeUp();
 	void photoprint();
 };
 

@@ -10,8 +10,8 @@ Tube::Tube()
 	//loadimage(&TubeDownMaskPhoto, "Resorce/picture/TubeDownMaskPhoto.png", 80, 350);
 	//loadimage(&TubeDownPhoto, "Resorce/picture/TubeDown1.png", 80, 350);
 
-	tubeup = new TubeUp;
-	tubedown = new TubeDown(*tubedown);
+	tubeup = new TubeUp();
+	tubedown = new TubeDown(*tubeup);
 	//TubeUp temp;
 	//tubeup = temp;
 	//TubeDown tmp = TubeDown(tubeup);
@@ -42,8 +42,8 @@ void Tube::TubeMove()
 
 Tube::~Tube()
 {
-	//delete tubedown;
-	//delete	tubeup;
-	//tubedown = NULL;
-	//tubeup = NULL;
+	delete tubedown;
+	delete	tubeup;
+	tubedown = NULL;
+	tubeup = NULL;
 }

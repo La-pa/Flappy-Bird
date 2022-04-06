@@ -1,7 +1,7 @@
 #pragma once
 #include"Global.h"
 #include"Collider.h"
-#include"TubeUp.h"
+
 class Bird:public Collider
 {
 private:
