@@ -39,8 +39,8 @@ void Flappy_Bird::GamePlaying()
 
 		if (tubefront != nullptr)
 		{
-			tubefront->photoprint();
-			tubeback->photoprint();
+			tubefront->TubeMove();
+			tubeback->TubeMove();
 		}
 
 		

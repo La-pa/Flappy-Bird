@@ -99,7 +99,7 @@ void Bird::flapwings()
 
 bool Bird::Death(Tube tmp)
 {
-	if (this->CollisionDetection(tmp.tubeup) || this->CollisionDetection(tmp.tubedown))
+	if (this->CollisionDetection(*tmp.tubeup) || this->CollisionDetection(*tmp.tubedown))
 	{
 		return true;
 	}

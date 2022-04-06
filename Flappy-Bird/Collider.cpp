@@ -1,5 +1,24 @@
 #include "Collider.h"
 
+int Collider::GetDrawX()
+{
+	return this->drawX;
+}
+
+int Collider::GetDrawY()
+{
+	return this->CenterY;
+}
+
+void Collider::SetDrawX(int x)
+{
+	this->drawX = x;
+}
+
+void Collider::SetDrawY(int y)
+{
+	this->drawY = y;
+}
 
 void Collider::GetCenter()
 {

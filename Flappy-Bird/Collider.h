@@ -19,6 +19,12 @@ public:
 	int CenterX;
 	int CenterY;
 
+	int GetDrawX();
+	int GetDrawY();
+
+	void SetDrawX(int x);
+	void SetDrawY(int y);
+
 	void GetCenter();
 
 	bool CollisionDetection(Collider  tmp);
