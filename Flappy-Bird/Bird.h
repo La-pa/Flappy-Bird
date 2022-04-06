@@ -1,6 +1,7 @@
 #pragma once
 #include"Global.h"
 #include"Collider.h"
+#include"TubeUp.h"
 class Bird:public Collider
 {
 private:
@@ -36,6 +37,7 @@ public:
 	//根据用户输入来拍打翅膀
 	void flapwings();
 
-	bool Death(Tube tmp);
+	bool Death(Tube* tmp);
+	//virtual bool CollisionDetection(Collider  tmp);
 };
 

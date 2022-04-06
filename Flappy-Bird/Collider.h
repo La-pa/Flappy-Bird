@@ -27,6 +27,6 @@ public:
 
 	void GetCenter();
 
-	bool CollisionDetection(Collider  tmp);
+	bool CollisionDetection(Collider*  tmp);
 };
 

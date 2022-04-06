@@ -1,9 +1,10 @@
 #include "TubeUp.h"
 
-TubeUp::TubeUp()
+TubeUp::TubeUp() 
 {
-	drawX = 400;
+
 	srand((unsigned)time(NULL));
+	drawX = 400;
 	drawY = -300 + (rand() % 7) * 50;
 
 	this->height = 350;

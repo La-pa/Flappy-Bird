@@ -12,6 +12,10 @@ Tube::Tube()
 
 	tubeup = new TubeUp;
 	tubedown = new TubeDown(*tubedown);
+	//TubeUp temp;
+	//tubeup = temp;
+	//TubeDown tmp = TubeDown(tubeup);
+	//tubedown = tmp;
 
 	drawX = 400;
 
@@ -38,8 +42,8 @@ void Tube::TubeMove()
 
 Tube::~Tube()
 {
-	delete tubedown;
-	delete	tubeup;
-	tubedown = NULL;
-	tubeup = NULL;
+	//delete tubedown;
+	//delete	tubeup;
+	//tubedown = NULL;
+	//tubeup = NULL;
 }
