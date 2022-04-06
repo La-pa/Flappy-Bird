@@ -1,15 +1,9 @@
 #pragma once
 #include"Global.h"
-
-class Bird
+#include"Collider.h"
+class Bird:public Collider
 {
 private:
-	//绘图点坐标
-	int drawX;
-
-	//图形中心点坐标
-	int centerX;
-	int centerY;
 
 	//速度
 	double speed;
@@ -35,12 +29,13 @@ private:
 	IMAGE flyphoto23;//向下
 
 public:
-	int drawY;
 
 	Bird(int drawX,int drawY);
 	void fly(int &flyans);
 
 	//根据用户输入来拍打翅膀
 	void flapwings();
+
+	bool Death(Tube tmp);
 };
 

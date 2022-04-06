@@ -6,6 +6,8 @@ Bird::Bird(int drawX, int drawY)
 	this->drawY = drawY;
 
 
+	this->height = BIRD_WEIGHT;
+	this->wide = BIRD_WIDTH;
 	speed = 0;
 
 	//水平方向
@@ -93,4 +95,18 @@ void Bird::flapwings()
 		//kbhit();
 		//break;
 	}
+}
+
+bool Bird::Death(Tube tmp)
+{
+	if (this->CollisionDetection(tmp.tubeup) || this->CollisionDetection(tmp.tubedown))
+	{
+		return true;
+	}
+		
+	if (this->drawY < 0 || this->drawY > 500)
+	{
+		return true;
+	}
+	return false;
 }
