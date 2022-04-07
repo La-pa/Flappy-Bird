@@ -13,7 +13,8 @@ void Flappy_Bird::GameStart()
 
 	//getbkcolor();
 
-	//closegraph();
+	closegraph();
+	cout << "ÄãÒÑËÀÍö" << endl;
 	system("pause");
 
 
@@ -33,9 +34,14 @@ void Flappy_Bird::GamePlaying()
 	
 	int ans = 0;
 	int flyans = 0;
-	while (!bird.Death(tubefront))
+	while (1)
 	{
 		map.background();
+
+		if (bird.Death(tubefront))
+		{
+			break;
+		}
 
 		if (tubefront != nullptr)
 		{
@@ -43,14 +49,13 @@ void Flappy_Bird::GamePlaying()
 			tubeback->TubeMove();
 		}
 
-		
 		if (tubefront->drawX < -80)
 		{
 			delete tubefront;
 			tubefront = tubeback;
 			tubeback = new Tube;
 		}
-
+		
 		map.groundmove(ans);
 
 		bird.fly(flyans);

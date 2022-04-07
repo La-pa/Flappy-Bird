@@ -99,12 +99,20 @@ void Bird::flapwings()
 
 bool Bird::Death(Tube* tmp)
 {
-	if (this->CollisionDetection(tmp->tubeup ) || this->CollisionDetection(tmp->tubedown))
+	if (this->CollisionDetection(tmp->tubeup ))
+	{
+		return true;
+	}
+	if (this->CollisionDetection(tmp->tubedown))
 	{
 		return true;
 	}
 		
-	if (this->drawY < 0 || this->drawY > 500)
+	if (this->drawY < 0)
+	{
+		return true;
+	}
+	if (this->drawY > 500)
 	{
 		return true;
 	}
