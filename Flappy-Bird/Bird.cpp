@@ -109,9 +109,7 @@ bool Bird::Death(Tube* tmp)
 		return true;
 	}
 	return false;
-	//tmp->tubeup->CollisionDetection;
-	//tmp->tubedown->CollisionDetection(this);
-	//tmp->tubedown->
+
 }
 
 

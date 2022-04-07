@@ -1,5 +1,6 @@
 #pragma once
 #include"Global.h"
+
 class Collider
 {
 

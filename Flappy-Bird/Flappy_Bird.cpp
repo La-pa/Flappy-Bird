@@ -33,7 +33,7 @@ void Flappy_Bird::GamePlaying()
 	
 	int ans = 0;
 	int flyans = 0;
-	while (bird.drawY <= 500 && bird.drawY >0)
+	while (!bird.Death(tubefront))
 	{
 		map.background();
 

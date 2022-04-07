@@ -5,11 +5,7 @@
 #include<conio.h>
 #include<time.h>
 #include<cstdlib>
-#include"Tube.h"
-#include"Collider.h"
-#include"Map.h"
-#include"TubeDown.h"
-#include"TubeUp.h"
+
 
 using namespace std;
 

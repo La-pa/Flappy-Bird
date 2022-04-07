@@ -1,6 +1,7 @@
 #pragma once
 #include"Global.h"
 #include"Collider.h"
+#include"Tube.h"
 
 class Bird:public Collider
 {

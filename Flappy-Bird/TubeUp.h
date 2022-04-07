@@ -1,7 +1,7 @@
 #pragma once
 //#include"Tube.h"
-#include"Global.h"
-#include"TubeDown.h"
+
+#include"Collider.h"
 
 class TubeUp:public Collider
 {

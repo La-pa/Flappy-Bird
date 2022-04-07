@@ -1,21 +1,22 @@
 #pragma once
 #include"Global.h"
-#include"TubeUp.h"
 #include"TubeDown.h"
+#include"TubeUp.h"
+
 
 class Tube
 {
 
 private:
 	
-	int drawX;
+	
 public:
-
+	int drawX;
 	//¹¹Ôìº¯Êý
 	Tube();
 
-	TubeUp* tubeup;
-	TubeDown* tubedown;
+	class TubeUp* tubeup;
+	class TubeDown* tubedown;
 
 	void TubeMove();
 	~Tube();
