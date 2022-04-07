@@ -6,6 +6,7 @@ Bird::Bird(int drawX, int drawY):Collider()
 	this->drawY = drawY;
 
 	this->flyans = 0;
+	this->option = 0;
 
 	this->height = BIRD_WEIGHT;
 	this->wide = BIRD_WIDTH;
@@ -34,6 +35,7 @@ void Bird::fly()
 {
 	int temp = flyans;
 	flyans /= 15;
+	
 	if (speed < 0)
 	{
 		switch (flyans)
@@ -72,12 +74,27 @@ void Bird::fly()
 	}
 	
 	
-
+	//flymusic();
 	drawY += int(speed*1);
 	speed += 0.16;
 	flyans = temp;
 	flyans+= 3;
 	flyans %= 60;
+}
+
+void Bird::flymusic()
+{
+	
+	switch (option)
+	{
+	case 1 :mciSendString("close Resorce/sounds/flapwings.wav", NULL, 0, NULL); option++; break;
+	case 2:mciSendString("open Resorce/sounds/flapwings.wav", NULL, 0, NULL); option++; break;
+	case 3:mciSendString("play Resorce/sounds/flapwings.wav", NULL, 0, NULL); option++; break;
+	default:break;
+	}
+	option %= 4;
+
+	
 }
 
 void Bird::StartAnimation()
@@ -111,8 +128,11 @@ void Bird::flapwings()
 		{
 			speed += -5;
 		}
-		//kbhit();
-		//break;
+		this->option = 1;
+		//mciSendString("close Resorce/sounds/flapwings.wav", NULL, 0, NULL);
+		//mciSendString("open Resorce/sounds/flapwings.wav", NULL, 0, NULL);
+		//mciSendString("play Resorce/sounds/flapwings.wav", NULL, 0, NULL);
+		
 	}
 }
 
@@ -127,11 +147,11 @@ bool Bird::Death(Tube* tmp)
 		return true;
 	}
 		
-	if (this->drawY < 0)
+	if (this->drawY <= 0)
 	{
 		return true;
 	}
-	if (this->drawY > 500)
+	if (this->drawY >= 500)
 	{
 		return true;
 	}
@@ -141,6 +161,7 @@ bool Bird::Death(Tube* tmp)
 
 void Bird::DeathAnimation()
 {
+
 	drawAlpha(&flyphoto23, drawX, drawY);
 	if (drawY <= 500)
 	{

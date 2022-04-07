@@ -10,7 +10,9 @@ private:
 
 	//速度
 	double speed;
-	
+
+	//音乐;
+	int option;
 
 	//图片信息
 	//水平方向
@@ -37,6 +39,7 @@ public:
 	Bird(int drawX,int drawY);
 	void fly();
 
+	void flymusic();
 	
 
 	//根据用户输入来拍打翅膀

@@ -5,6 +5,9 @@
 #include<conio.h>
 #include<time.h>
 #include<cstdlib>
+#include <mmsystem.h>
+#include <windows.h>
+#pragma comment(lib,"winmm.lib")
 
 
 using namespace std;

@@ -98,14 +98,29 @@ void Flappy_Bird::GamePlaying()
 
 void Flappy_Bird::GameOver(Map &map , Bird &bird, Tube* &tubefront,Tube * &tubeback)
 {
+	map.background();
+
+	tubefront->TubePrint();
+	tubeback->TubePrint();
+
+	bird.DeathAnimation();
+	map.groundprint();
+	drawAlpha(&gameOver, 75, 50);
+	drawAlpha(&startButton, 135, 400); 
+
+	mciSendString("open Resorce/sounds/die.wav", NULL, 0, NULL);
+	mciSendString("play Resorce/sounds/die.wav", NULL, 0, NULL);
+
 	ExMessage msg;
 	while(1)
 	{
 		
 		map.background();
-		bird.DeathAnimation();
+		
 		tubefront->TubePrint();
 		tubeback->TubePrint();
+
+		bird.DeathAnimation();
 		map.groundprint();
 		drawAlpha(&gameOver, 75, 50);
 		drawAlpha(&startButton, 135, 400);
@@ -120,6 +135,11 @@ void Flappy_Bird::GameOver(Map &map , Bird &bird, Tube* &tubefront,Tube * &tubeb
 				//ЪѓБъзѓМќ
 				if (msg.x >= 135 && msg.x <= 265 && msg.y >= 400 && msg.y <= 470)
 				{
+					mciSendString("close Resorce/sounds/die.wav", NULL, 0, NULL);
+					delete tubeback;
+					delete tubefront;
+					tubeback = nullptr;
+					tubefront = nullptr;
 					return;
 				}
 				break;
