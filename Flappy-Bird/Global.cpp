@@ -1,6 +1,7 @@
 #include"Global.h"
 
-clock_t Time_temp = clock();
+//clock_t Time_temp = clock();
+clock_t Time_temp =0 ;
 
 void Timestamp()
 {

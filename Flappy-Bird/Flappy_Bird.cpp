@@ -13,7 +13,7 @@ void Flappy_Bird::GameStart()
 
 	//getbkcolor();
 
-	closegraph();
+	//closegraph();
 	system("pause");
 
 
@@ -24,7 +24,7 @@ void Flappy_Bird::GameStart()
 void Flappy_Bird::GamePlaying()
 {
 	Map map;
-	Bird bird = Bird(175,275);
+	Bird bird = Bird(100,275);
 	
 	//test
 	Tube *tubefront= new Tube;

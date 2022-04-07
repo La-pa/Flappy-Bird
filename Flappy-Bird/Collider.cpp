@@ -7,7 +7,7 @@ int Collider::GetDrawX()
 
 int Collider::GetDrawY()
 {
-	return this->CenterY;
+	return this->drawY;
 }
 
 void Collider::SetDrawX(int x)
