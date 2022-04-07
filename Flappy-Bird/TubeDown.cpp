@@ -1,9 +1,9 @@
 #include "TubeDown.h"
 
-TubeDown::TubeDown( TubeUp const &tubeup)
+TubeDown::TubeDown( TubeUp tubeup)
 {
 	this->drawX = 400;
-	this->drawY = tubeup.drawY + 150 + 350;
+	this->drawY = tubeup.GetDrawY() + 150 + 350;
 
 	this->height = 350;
 	this->wide = 80;

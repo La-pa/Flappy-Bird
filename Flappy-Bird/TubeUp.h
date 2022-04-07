@@ -1,10 +1,11 @@
 #pragma once
-#include"Tube.h"
-//#include"TubeDown.h"
+//#include"Tube.h"
+#include"Global.h"
+#include"TubeDown.h"
 
-class TubeUp : public Collider
+class TubeUp:public Collider
 {
-	friend class TubeDown;
+	//friend class TubeDown;
 private:
 	IMAGE TubeUpPhoto;
 	IMAGE TubeUpMaskPhoto;

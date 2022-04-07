@@ -9,15 +9,17 @@ Tube::Tube()
 	//loadimage(&TubeUpPhoto, "Resorce/picture/TubeUp1.png", 80, 350);
 	//loadimage(&TubeDownMaskPhoto, "Resorce/picture/TubeDownMaskPhoto.png", 80, 350);
 	//loadimage(&TubeDownPhoto, "Resorce/picture/TubeDown1.png", 80, 350);
+	drawX = 400;
 
 	tubeup = new TubeUp();
 	tubedown = new TubeDown(*tubeup);
+
 	//TubeUp temp;
 	//tubeup = temp;
 	//TubeDown tmp = TubeDown(tubeup);
 	//tubedown = tmp;
 
-	drawX = 400;
+	
 
 }
 
