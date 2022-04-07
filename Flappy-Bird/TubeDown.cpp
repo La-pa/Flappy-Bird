@@ -2,8 +2,8 @@
 
 TubeDown::TubeDown( TubeUp const &tubeup)
 {
-	drawX = 400;
-	drawY = tubeup.drawY + 150 + 350;
+	this->drawX = 400;
+	this->drawY = tubeup.drawY + 150 + 350;
 
 	this->height = 350;
 	this->wide = 80;

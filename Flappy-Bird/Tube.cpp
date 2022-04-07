@@ -37,13 +37,14 @@ void Tube::TubeMove()
 	tubedown->photoprint();
 	drawX -= 2;
 	
-
+	
 }
 
 Tube::~Tube()
 {
-	delete tubedown;
 	delete	tubeup;
+	delete tubedown;
+	
 	tubedown = NULL;
 	tubeup = NULL;
 }

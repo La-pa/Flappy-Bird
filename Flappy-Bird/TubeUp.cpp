@@ -4,8 +4,8 @@ TubeUp::TubeUp()
 {
 
 	srand((unsigned)time(NULL));
-	drawX = 400;
-	drawY = -300 + (rand() % 7) * 50;
+	this->drawX = 400;
+	this->drawY = -300 + (rand() % 7) * 50;
 
 	this->height = 350;
 	this->wide = 80;
