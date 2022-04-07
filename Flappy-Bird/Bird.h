@@ -31,10 +31,11 @@ private:
 	IMAGE flyphoto22;//正常
 	IMAGE flyphoto23;//向下
 
+	int flyans;
 public:
 
 	Bird(int drawX,int drawY);
-	void fly(int &flyans);
+	void fly();
 
 	
 
@@ -42,9 +43,13 @@ public:
 	void flapwings();
 
 	//开始动画
-	void StartAnimation(int& flyans);
+	void StartAnimation();
 
+	//死亡判断
 	bool Death(Tube* tmp);
+
+	//死亡动画
+	void DeathAnimation();
 	
 };
 

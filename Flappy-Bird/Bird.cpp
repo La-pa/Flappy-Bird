@@ -5,6 +5,7 @@ Bird::Bird(int drawX, int drawY):Collider()
 	this->drawX = drawX;
 	this->drawY = drawY;
 
+	this->flyans = 0;
 
 	this->height = BIRD_WEIGHT;
 	this->wide = BIRD_WIDTH;
@@ -29,7 +30,7 @@ Bird::Bird(int drawX, int drawY):Collider()
 	loadimage(&flyphoto23, "Resorce/picture/birdFlutterDownFall.png",BIRD_WIDTH,BIRD_WEIGHT);
 }
 
-void Bird::fly(int &flyans)
+void Bird::fly()
 {
 	int temp = flyans;
 	flyans /= 15;
@@ -79,7 +80,7 @@ void Bird::fly(int &flyans)
 	flyans %= 60;
 }
 
-void Bird::StartAnimation(int& flyans)
+void Bird::StartAnimation()
 {
 	int temp = flyans;
 	flyans /= 15;
@@ -138,4 +139,12 @@ bool Bird::Death(Tube* tmp)
 
 }
 
+void Bird::DeathAnimation()
+{
+	drawAlpha(&flyphoto23, drawX, drawY);
+	if (drawY <= 500)
+	{
+		drawY += 3;
+	}
+}
 

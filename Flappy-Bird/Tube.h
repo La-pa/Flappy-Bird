@@ -19,6 +19,7 @@ public:
 	class TubeDown* tubedown;
 
 	void TubeMove();
+	void TubePrint();
 	~Tube();
 };
 

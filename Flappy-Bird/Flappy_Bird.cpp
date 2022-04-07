@@ -6,7 +6,7 @@ Flappy_Bird::Flappy_Bird()
 {
 	loadimage(&title, "Resorce/picture/title.png", 220, 100);
 	loadimage(&startButton, "Resorce/picture/startButton.png", 130, 70);
-	loadimage(&gameOver, "Resorce/picture/gameOver.png", 220, 300);
+	loadimage(&gameOver, "Resorce/picture/gameOver.png", 250, 300);
 
 }
 
@@ -19,7 +19,6 @@ void Flappy_Bird::GameStart()
 	Map* map =  new Map;
 
 	ExMessage msg;
-	int flyans = 0;
 	while (1)
 	{
 
@@ -29,7 +28,7 @@ void Flappy_Bird::GameStart()
 		
 
 		drawAlpha(&startButton, 135, 400);
-		bird->StartAnimation(flyans);
+		bird->StartAnimation();
 		Timestamp();
 		if (peekmessage(&msg, EM_MOUSE))
 		{
@@ -49,10 +48,6 @@ void Flappy_Bird::GameStart()
 		}
 	}
 
-	//GamePlaying();
-
-	//getbkcolor();
-
 
 }
 
@@ -66,7 +61,7 @@ void Flappy_Bird::GamePlaying()
 	Tube* tubeback = new Tube;
 	tubeback->drawX = 640;
 	
-	int flyans = 0;
+	//int flyans = 0;
 	while (1)
 	{
 		map.background();
@@ -91,23 +86,47 @@ void Flappy_Bird::GamePlaying()
 		
 		map.groundmove();
 
-		bird.fly(flyans);
+		bird.fly();
 		bird.flapwings();
 		
 		Timestamp();
 		
 	}
+	 
 	GameOver(map, bird, tubefront, tubeback);
 }
 
 void Flappy_Bird::GameOver(Map &map , Bird &bird, Tube* &tubefront,Tube * &tubeback)
 {
-	
+	ExMessage msg;
 	while(1)
 	{
-		drawAlpha(&gameOver, 100, 50);
+		
 		map.background();
+		bird.DeathAnimation();
+		tubefront->TubePrint();
+		tubeback->TubePrint();
 		map.groundprint();
+		drawAlpha(&gameOver, 75, 50);
+		drawAlpha(&startButton, 135, 400);
+		
+
+		if (peekmessage(&msg, EM_MOUSE))
+		{
+
+			switch (msg.message)
+			{
+			case WM_LBUTTONDOWN:
+				//ЪѓБъзѓМќ
+				if (msg.x >= 135 && msg.x <= 265 && msg.y >= 400 && msg.y <= 470)
+				{
+					return;
+				}
+				break;
+			default:
+				break;
+			}
+		}
 		Timestamp();
 	}
 	
