@@ -2,22 +2,56 @@
 
 
 
+Flappy_Bird::Flappy_Bird()
+{
+	loadimage(&title, "Resorce/picture/title.png", 220, 100);
+	loadimage(&startButton, "Resorce/picture/startButton.png", 130, 70);
+	loadimage(&gameOver, "Resorce/picture/gameOver.png", 220, 300);
+
+}
+
 void Flappy_Bird::GameStart()
 {
 	initgraph(INTERFACE_WIDTH, INTERFACE_WEIGHT);
-	setbkcolor(WHITE);
-	setfillcolor(WHITE);
-	//setbkmode(OPAQUE);
-	setbkmode(TRANSPARENT);
-	GamePlaying();
+
+	//Bird bird(175, 300);
+	Bird* bird = new Bird(175, 300);
+	Map* map =  new Map;
+
+	ExMessage msg;
+	int flyans = 0;
+	while (1)
+	{
+
+		map->background();
+		map->groundmove();
+		drawAlpha(&title, 100, 150);
+		
+
+		drawAlpha(&startButton, 135, 400);
+		bird->StartAnimation(flyans);
+		Timestamp();
+		if (peekmessage(&msg, EM_MOUSE))
+		{
+			
+			switch (msg.message)
+			{
+			case WM_LBUTTONDOWN:
+				//Êó±ê×ó¼ü
+				if (msg.x >= 135 && msg.x <= 265 && msg.y >= 400 && msg.y <= 470)
+				{
+					GamePlaying();
+				}
+				break;
+			default:
+				break;
+			}
+		}
+	}
+
+	//GamePlaying();
 
 	//getbkcolor();
-
-	closegraph();
-	cout << "ÄãÒÑËÀÍö" << endl;
-	system("pause");
-
-
 
 
 }
@@ -32,7 +66,6 @@ void Flappy_Bird::GamePlaying()
 	Tube* tubeback = new Tube;
 	tubeback->drawX = 640;
 	
-	int ans = 0;
 	int flyans = 0;
 	while (1)
 	{
@@ -56,7 +89,7 @@ void Flappy_Bird::GamePlaying()
 			tubeback = new Tube;
 		}
 		
-		map.groundmove(ans);
+		map.groundmove();
 
 		bird.fly(flyans);
 		bird.flapwings();
@@ -64,11 +97,18 @@ void Flappy_Bird::GamePlaying()
 		Timestamp();
 		
 	}
-	
-	
+	GameOver(map, bird, tubefront, tubeback);
 }
 
-void Flappy_Bird::GameOver()
+void Flappy_Bird::GameOver(Map &map , Bird &bird, Tube* &tubefront,Tube * &tubeback)
 {
-
+	
+	while(1)
+	{
+		drawAlpha(&gameOver, 100, 50);
+		map.background();
+		map.groundprint();
+		Timestamp();
+	}
+	
 }

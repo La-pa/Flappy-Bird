@@ -6,8 +6,12 @@
 
 class Flappy_Bird
 {
-	
+private:
+	IMAGE title;
+	IMAGE startButton;
+	IMAGE gameOver;
 public:
+	Flappy_Bird();
 
 	//游戏开始界面
 	void GameStart();
@@ -16,6 +20,6 @@ public:
 	void GamePlaying();
 
 	//游戏结束界面
-	void GameOver();
+	void GameOver(Map& map, Bird& bird, Tube*& tubefront, Tube*& tubeback);
 };
 

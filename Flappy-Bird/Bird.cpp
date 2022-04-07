@@ -79,6 +79,24 @@ void Bird::fly(int &flyans)
 	flyans %= 60;
 }
 
+void Bird::StartAnimation(int& flyans)
+{
+	int temp = flyans;
+	flyans /= 15;
+	switch (flyans)
+	{
+	case 0:drawAlpha(&flyphoto00, drawX, drawY); break;
+	case 1:drawAlpha(&flyphoto01, drawX, drawY); break;
+	case 2:drawAlpha(&flyphoto02, drawX, drawY); break;
+	case 3:drawAlpha(&flyphoto03, drawX, drawY); break;
+	default:
+		break;
+	}
+	flyans = temp;
+	flyans += 3;
+	flyans %= 60;
+}
+
 void Bird::flapwings()
 {
 	if (kbhit())

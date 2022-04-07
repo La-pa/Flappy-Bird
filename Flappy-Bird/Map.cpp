@@ -3,6 +3,9 @@
 
 Map::Map()
 {
+
+	this->ans = 0;
+
 	//±³¾°Í¼Æ¬
 	loadimage(&backgroundphoto, "Resorce/picture/background.png", INTERFACE_WIDTH, INTERFACE_WEIGHT);
 
@@ -17,7 +20,7 @@ void Map:: background()
 	putimage(0, 0, &backgroundphoto);
 }
 
-void Map::groundmove(int& ans)
+void Map::groundmove()
 {
 
 	putimage(-ans, 550, &groundphoto);
@@ -25,5 +28,11 @@ void Map::groundmove(int& ans)
 
 	ans += 2;
 	ans %= 398;
+}
+
+void Map::groundprint()
+{
+	putimage(-ans, 550, &groundphoto);
+	putimage(400 - ans - 2, 550, &groundphoto);
 }
 

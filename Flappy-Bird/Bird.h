@@ -36,10 +36,15 @@ public:
 	Bird(int drawX,int drawY);
 	void fly(int &flyans);
 
+	
+
 	//根据用户输入来拍打翅膀
 	void flapwings();
 
+	//开始动画
+	void StartAnimation(int& flyans);
+
 	bool Death(Tube* tmp);
-	//virtual bool CollisionDetection(Collider  tmp);
+	
 };
 
