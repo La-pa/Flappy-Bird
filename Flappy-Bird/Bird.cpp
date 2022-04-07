@@ -147,7 +147,7 @@ bool Bird::Death(Tube* tmp)
 		return true;
 	}
 		
-	if (this->drawY <= 0)
+	if (this->drawY <= 10)
 	{
 		return true;
 	}

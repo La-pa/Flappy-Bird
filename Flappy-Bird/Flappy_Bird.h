@@ -20,6 +20,6 @@ public:
 	void GamePlaying();
 
 	//游戏结束界面
-	void GameOver(Map& map, Bird& bird, Tube*& tubefront, Tube*& tubeback);
+	void GameOver(Map& map, Bird& bird, Tube*& tubefront, Tube*& tubeback); 
 };
 
